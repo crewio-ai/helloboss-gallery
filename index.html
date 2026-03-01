@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HelloBoss — Creative Gallery</title>
+  <meta name="description" content="HelloBoss Instagram ads gallery — 13 creative posts">
+  <style>
+    *,::before,::after{box-sizing:border-box}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      background:#fafafa;
+      color:#2d2d2d;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+    }
+    .g-wrap{max-width:1280px;margin:0 auto;padding:32px 24px 48px}
+    .g-hero{
+      margin-bottom:48px;
+      padding-bottom:24px;
+      border-bottom:1px solid #e8e8e8;
+    }
+    .g-hero h1{
+      font-size:1.5rem;
+      font-weight:600;
+      letter-spacing:-0.02em;
+      margin:0 0 4px;
+      color:#0a0a0a;
+    }
+    .g-hero .g-tagline{
+      font-size:0.8125rem;
+      color:#666;
+      margin:0;
+    }
+    .g-hero .g-meta{
+      font-size:0.75rem;
+      color:#888;
+      margin:8px 0 0;
+    }
+    .g-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:24px;
+    }
+    .g-card{
+      background:#fff;
+      border-radius:6px;
+      overflow:hidden;
+      box-shadow:0 1px 3px rgba(0,0,0,0.04);
+      transition:box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .g-card:hover{
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transform:translateY(-1px);
+    }
+    .g-card-main{
+      aspect-ratio:1;
+      overflow:hidden;
+      background:#f0f0f0;
+      cursor:zoom-in;
+    }
+    .g-card-main img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+      transition:opacity 0.2s ease;
+    }
+    .g-card:hover .g-card-main img{opacity:0.96}
+    .g-label{
+      margin:12px 16px 16px;
+      font-size:0.8125rem;
+      font-weight:500;
+      color:#333;
+      text-transform:capitalize;
+    }
+    .g-raw-group{
+      display:flex;
+      gap:8px;
+      padding:0 16px 16px;
+      flex-wrap:wrap;
+    }
+    .g-card-raw{
+      width:56px;
+      height:56px;
+      border-radius:4px;
+      overflow:hidden;
+      background:#eee;
+    }
+    .g-card-raw img{width:100%;height:100%;object-fit:cover;display:block}
+    .g-modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(10,10,10,0.92);
+      z-index:100;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      opacity:0;
+      transition:opacity 0.2s ease;
+    }
+    .g-modal.show{
+      display:flex;
+      opacity:1;
+    }
+    .g-modal-inner{position:relative;max-width:95vw;max-height:95vh}
+    .g-modal img{
+      max-width:100%;
+      max-height:95vh;
+      object-fit:contain;
+      display:block;
+      border-radius:4px;
+    }
+    .g-modal-close{
+      position:absolute;
+      top:-40px;
+      right:0;
+      color:#fff;
+      font-size:1.5rem;
+      cursor:pointer;
+      padding:8px;
+      line-height:1;
+      opacity:0.8;
+    }
+    .g-modal-close:hover{opacity:1}
+    .g-footer{
+      margin-top:48px;
+      padding-top:24px;
+      border-top:1px solid #e8e8e8;
+      font-size:0.75rem;
+      color:#888;
+    }
+    .g-footer span{font-weight:500;color:#666}
+  </style>
+</head>
+<body>
+  <div class="g-wrap">
+    <header class="g-hero">
+      <h1>HelloBoss</h1>
+      <p class="g-tagline">Instagram Ads Gallery</p>
+      <p class="g-meta">13 posts · 1 Mar 2026</p>
+    </header>
+    <main class="g-grid">
+    <article class="g-card" data-post="beauty-1">
+      <div class="g-card-main">
+        <img src="images/beauty-1/final-ads.png" alt="beauty-1" loading="lazy" />
+      </div>
+      <p class="g-label">beauty 1</p>
+      
+    </article>
+    <article class="g-card" data-post="day1-1">
+      <div class="g-card-main">
+        <img src="images/day1-1/final-ads.png" alt="day1-1" loading="lazy" />
+      </div>
+      <p class="g-label">day1 1</p>
+      
+    </article>
+    <article class="g-card" data-post="day1-2">
+      <div class="g-card-main">
+        <img src="images/day1-2/final-ads.png" alt="day1-2" loading="lazy" />
+      </div>
+      <p class="g-label">day1 2</p>
+      
+    </article>
+    <article class="g-card" data-post="day1-3">
+      <div class="g-card-main">
+        <img src="images/day1-3/final-ads.png" alt="day1-3" loading="lazy" />
+      </div>
+      <p class="g-label">day1 3</p>
+      
+    </article>
+    <article class="g-card" data-post="day1-4">
+      <div class="g-card-main">
+        <img src="images/day1-4/final-ads.png" alt="day1-4" loading="lazy" />
+      </div>
+      <p class="g-label">day1 4</p>
+      
+    </article>
+    <article class="g-card" data-post="day1-5">
+      <div class="g-card-main">
+        <img src="images/day1-5/final-ads.png" alt="day1-5" loading="lazy" />
+      </div>
+      <p class="g-label">day1 5</p>
+      
+    </article>
+    <article class="g-card" data-post="sme-1">
+      <div class="g-card-main">
+        <img src="images/sme-1/final-ads.png" alt="sme-1" loading="lazy" />
+      </div>
+      <p class="g-label">sme 1</p>
+      
+    </article>
+    <article class="g-card" data-post="sme-2">
+      <div class="g-card-main">
+        <img src="images/sme-2/final-ads.png" alt="sme-2" loading="lazy" />
+      </div>
+      <p class="g-label">sme 2</p>
+      
+    </article>
+    <article class="g-card" data-post="sme-3">
+      <div class="g-card-main">
+        <img src="images/sme-3/final-ads.png" alt="sme-3" loading="lazy" />
+      </div>
+      <p class="g-label">sme 3</p>
+      
+    </article>
+    <article class="g-card" data-post="sme-4">
+      <div class="g-card-main">
+        <img src="images/sme-4/final-ads.png" alt="sme-4" loading="lazy" />
+      </div>
+      <p class="g-label">sme 4</p>
+      
+    </article>
+    <article class="g-card" data-post="sme-5">
+      <div class="g-card-main">
+        <img src="images/sme-5/final-ads.png" alt="sme-5" loading="lazy" />
+      </div>
+      <p class="g-label">sme 5</p>
+      
+    </article>
+    <article class="g-card" data-post="trainer-1">
+      <div class="g-card-main">
+        <img src="images/trainer-1/final-ads.png" alt="trainer-1" loading="lazy" />
+      </div>
+      <p class="g-label">trainer 1</p>
+      
+    </article>
+    <article class="g-card" data-post="yoga-1">
+      <div class="g-card-main">
+        <img src="images/yoga-1/final-ads.png" alt="yoga-1" loading="lazy" />
+      </div>
+      <p class="g-label">yoga 1</p>
+      
+    </article></main>
+    <footer class="g-footer"><span>HelloBoss</span> · CREWIO</footer>
+  </div>
+  <div class="g-modal" id="modal" role="dialog" aria-modal="true" aria-label="View image">
+    <div class="g-modal-inner" onclick="event.stopPropagation()">
+      <span class="g-modal-close" id="modal-close" aria-label="Close">&times;</span>
+      <img id="modal-img" src="" alt="">
+    </div>
+  </div>
+  <script>
+    (function(){
+      var modal=document.getElementById('modal');
+      var imgEl=document.getElementById('modal-img');
+      var closeEl=document.getElementById('modal-close');
+      function open(src){imgEl.src=src;modal.classList.add('show');document.body.style.overflow='hidden'}
+      function close(){modal.classList.remove('show');document.body.style.overflow='';imgEl.src=''}
+      document.querySelectorAll('.g-card-main img').forEach(function(el){
+        el.addEventListener('click',function(){open(this.src)});
+      });
+      modal.addEventListener('click',close);
+      closeEl.addEventListener('click',close);
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+    })();
+  </script>
+</body>
+</html>
